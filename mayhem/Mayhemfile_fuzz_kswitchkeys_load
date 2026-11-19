@@ -1,0 +1,9 @@
+project: savantenvs/SEAL
+target: fuzz_kswitchkeys_load
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_kswitchkeys_load/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_kswitchkeys_load
+    libfuzzer: true
+    timeout: 10

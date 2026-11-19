@@ -1,0 +1,9 @@
+project: savantenvs/SEAL
+target: fuzz_decryptor
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_decryptor/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_decryptor
+    libfuzzer: true
+    timeout: 10
